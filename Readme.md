@@ -8,11 +8,13 @@ This project predicts car prices using machine learning. It uses **XGBoost** wit
 
 ```
 
-├── train.py           # Code to train and tune the model with Optuna
-├── app.py         # Use the saved model to predict from a local dictionary
-├── data/car\_price\_model\_xgb\_gpu.pkl  # Saved model (after training)
-├── README.md                # Project documentation
-└── data/car\_data.csv             # Example CSV (car listings with prices)
+├── train.py                          # Code to train and tune the model with Optuna
+├── app.py                            # Use the saved model to predict from a local dictionary
+├── data/car_price_model_xgb_gpu.pkl  # Saved model (after training)
+├── README.md                         # Project documentation
+├── data/car_price_model_xgb_gpu.pkl  # Saved model (after training)
+├── data/car_data_cleaned.csv         # Normalized Data
+└── data/car_data.csv                 # Example CSV (car listings with prices)
 
 ````
 
