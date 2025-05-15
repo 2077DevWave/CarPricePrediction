@@ -2,7 +2,7 @@ import pandas as pd
 import joblib
 
 # Load the saved model
-model = joblib.load("car_price_model_xgb_gpu.pkl")
+model = joblib.load("data/car_price_model_xgb_gpu.pkl")
 
 # Example single car data as a dict (use your actual feature names and values)
 sample_data = {

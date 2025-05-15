@@ -50,7 +50,7 @@ def is_invalid_price(price):
 
 # === Load and preprocess ===
 
-df = pd.read_csv("car_data.csv")
+df = pd.read_csv("data/car_data.csv")
 print(f"Initial rows: {len(df)}")
 
 # Clean numeric/text columns
@@ -93,5 +93,5 @@ df.drop(columns=categorical_columns, inplace=True)
 df_final = pd.concat([df, df_encoded], axis=1)
 
 # Save output
-df_final.to_csv("car_data_cleaned.csv", index=False)
+df_final.to_csv("data/car_data_cleaned.csv", index=False)
 print(f"✅ Final saved: {len(df_final)} rows, {df_final.shape[1]} columns")

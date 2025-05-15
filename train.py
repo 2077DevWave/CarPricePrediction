@@ -8,7 +8,7 @@ from sklearn.metrics import mean_absolute_error
 import joblib
 
 # Load CSV and clean column names
-df = pd.read_csv("car_prices.csv")
+df = pd.read_csv("data/car_prices.csv")
 df.columns = [col.replace(" ", "_").replace("ٔ", "").replace("،", "").replace("‌", "_") for col in df.columns]
 
 # Features and target
@@ -64,8 +64,8 @@ final_model = XGBRegressor(**best_params)
 final_model.fit(X_train, y_train)
 
 # Save the model
-joblib.dump(final_model, "car_price_model_xgb_gpu.pkl")
-print("✅ Model saved to 'car_price_model_xgb_gpu.pkl'")
+joblib.dump(final_model, "data/car_price_model_xgb_gpu.pkl")
+print("✅ Model saved to 'data/car_price_model_xgb_gpu.pkl'")
 
 # Optional: Predict a sample
 sample = X.iloc[0].values.reshape(1, -1)
